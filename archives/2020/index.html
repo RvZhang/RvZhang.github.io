@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
     <meta name="description" content="个人博客,"> 
-    <meta name="author" content="candyZhang"> 
+    <meta name="author" content="cnadyZhang"> 
     <link rel="alternative" href="atom.xml" title="棒棒糖zhang的博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
@@ -60,9 +60,58 @@
                 <div class="content animated fadeIn">
                     <div class="set">
                         <h1 style="text-align: center">Archived</h1>
-                        <p style="text-align: center">「 1 」</p>
+                        <p style="text-align: center">「 3 」</p>
                         <ul class="timeline timeline-centered">
                             
+                            
+                                
+                                <li class="timeline-item period">
+                                    <div class="timeline-info"></div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h2 class="timeline-title">七月 2020</h2>
+                                    </div>
+                                </li>
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">七月 12, 2020</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/2020/07/12/linux-%E5%90%AF%E5%8A%A8jar%E4%B8%8D%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97/">linux 启动jar不输出日志</a>
+                                        <p>
+                                            java -jar XXX.jar &amp;
+命令结尾没有 “&amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接关闭窗口，则程序直接退出
+命令结尾添加 “&amp;” ，则变成 “java -jar XXX.jar &amp;” ，表示在当窗口关闭时，程序才会中止运行。&amp;代表让该命令在后台执行。
+
+n...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
+                                        <span class="gradient-text">七月 11, 2020</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/2020/07/11/MySQL%E5%A4%87%E4%BB%BD-bin-log-%E5%86%B7%E5%A4%87%E4%BB%BD/">MySQL备份,bin_log+冷备份</a>
+                                        <p>
+                                            1 开启binglog[mysqld]
+log_bin=mysql_bin
+binlog-format=STATEMENT
+server-id=1重启MySQL
+进入到MySQL中，使用面命令查看是否开启bin_log
+show binary logs
+#2冷备份目录文件
+设置备份文件目录脚本 backup_mysql.sh
+#!/bin/sh
+backuppath=/home/logonu...
+                                        </p>
+                                    </div>
+                                </li>
                             
                                 
                                 <li class="timeline-item period">
@@ -105,7 +154,7 @@ Qu...
     <p class="copyright" id="copyright">
         &copy; 2020
         <span class="gradient-text">
-            candyZhang
+            cnadyZhang
         </span>.
         Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
         Theme
