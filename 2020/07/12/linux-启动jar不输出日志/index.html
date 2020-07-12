@@ -11,7 +11,8 @@
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
     <meta name="description" content="个人博客,java -jar XXX.jar &amp;amp;
-命令结尾没有 “&amp;amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接关,"> 
+
+命令结尾没有 “&amp;amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接,"> 
     <meta name="author" content="cnadyZhang"> 
     <link rel="alternative" href="atom.xml" title="棒棒糖zhang的博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -99,7 +100,7 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.3k
+                    1.4k
                 </span>
                 
                 
@@ -137,22 +138,25 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <pre><code>java -jar XXX.jar &amp;</code></pre><ul>
+            <pre><code class="bash">java -jar XXX.jar &amp;</code></pre>
+<ul>
 <li>命令结尾没有 “&amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接关闭窗口，则程序直接退出</li>
 <li>命令结尾添加 “&amp;” ，则变成 “java -jar XXX.jar &amp;” ，表示在当窗口关闭时，程序才会中止运行。&amp;代表让该命令在后台执行。</li>
 </ul>
-<pre><code>nohup java -jar XXX.jar &gt; Log.log &amp; 
+<pre><code class="bash">nohup java -jar XXX.jar &gt; Log.log &amp; 
 或者
-nohup java -jar XXX.jar &gt;&gt; Log.log &amp; </code></pre><ul>
+nohup java -jar XXX.jar &gt;&gt; Log.log &amp; </code></pre>
+<ul>
 <li>命令 “nohup java -jar XXX.jar &amp;” 部分，表示不挂断运行命令,当账户退出或终端关闭时,程序仍然运行。注意，该作业的所有输出被重定向到nohup.out的文件中。</li>
 <li>命令 “nohup java -jar XXX.jar &gt; Log.log &amp;” 部分，表示不挂断运行命令,当账户退出或终端关闭时,程序仍然运行，并且该作业的所有输出被重定向到Log.log的文件中。“ &gt; Log.log ” 该命令就是指定日志输出的文件。</li>
 <li>“&gt;&gt;”表示将输出以追加的方式重定向到Log.log中。</li>
 </ul>
-<pre><code>nohup java -jar XXX.jar &gt; Log.log 2&gt;&amp;1 &amp; 
+<pre><code class="bash">nohup java -jar XXX.jar &gt; Log.log 2&gt;&amp;1 &amp; 
 或者
 nohup java -jar XXX.jar &gt;&gt; Log.log 2&gt;&amp;1 &amp; 
 或者
-nohup java -jar XXX.jar &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre><ul>
+nohup java -jar XXX.jar &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
+<ul>
 <li>标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。</li>
 <li>标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。</li>
 <li>标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。</li>

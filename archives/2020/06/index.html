@@ -82,10 +82,11 @@
                                         <a class="timeline-title" target="_self" href="/2020/07/12/linux-%E5%90%AF%E5%8A%A8jar%E4%B8%8D%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97/">linux 启动jar不输出日志</a>
                                         <p>
                                             java -jar XXX.jar &amp;
+
 命令结尾没有 “&amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接关闭窗口，则程序直接退出
 命令结尾添加 “&amp;” ，则变成 “java -jar XXX.jar &amp;” ，表示在当窗口关闭时，程序才会中止运行。&amp;代表让该命令在后台执行。
 
-n...
+...
                                         </p>
                                     </div>
                                 </li>
@@ -102,11 +103,12 @@ n...
                                             1 开启binglog[mysqld]
 log_bin=mysql_bin
 binlog-format=STATEMENT
-server-id=1重启MySQL
+server-id=1
+重启MySQL
 进入到MySQL中，使用面命令查看是否开启bin_log
 show binary logs
-#2冷备份目录文件
-设置备份文件目录脚本 backup_mysql.sh
+
+2冷备份目录文件设置备份文件目录脚本 backup_mysql.sh
 #!/bin/sh
 backuppath=/home/logonu...
                                         </p>

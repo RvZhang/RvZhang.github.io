@@ -13,8 +13,9 @@
     <meta name="description" content="个人博客,1 开启binglog[mysqld]
 log_bin=mysql_bin
 binlog-format=STATEMENT
-server-id=1重启MySQL
-进入到MySQL中，使用面命令查看是,"> 
+server-id=1
+重启MySQL
+进入到MySQL中，使用面命令查看,"> 
     <meta name="author" content="cnadyZhang"> 
     <link rel="alternative" href="atom.xml" title="棒棒糖zhang的博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -102,7 +103,7 @@ server-id=1重启MySQL
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    826
+                    1k
                 </span>
                 
                 
@@ -140,19 +141,21 @@ server-id=1重启MySQL
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="1-开启binglog"><a href="#1-开启binglog" class="headerlink" title="1 开启binglog"></a>1 开启binglog</h1><pre><code>[mysqld]
+            <h1 id="1-开启binglog"><a href="#1-开启binglog" class="headerlink" title="1 开启binglog"></a>1 开启binglog</h1><pre><code class="mysql.cnf">[mysqld]
 log_bin=mysql_bin
 binlog-format=STATEMENT
-server-id=1</code></pre><p>重启MySQL</p>
+server-id=1</code></pre>
+<p>重启MySQL</p>
 <p>进入到MySQL中，使用面命令查看是否开启bin_log</p>
-<pre><code>show binary logs</code></pre><p><img src="https://lexiangla.com/assets/a8855436addf11eab5320a58ac135928" alt="图片" title="图片"></p>
-<p>#2冷备份目录文件</p>
-<p>设置备份文件目录脚本 backup_mysql.sh</p>
-<pre><code>#!/bin/sh
+<pre><code class="mysql">show binary logs</code></pre>
+<p><img src="https://lexiangla.com/assets/a8855436addf11eab5320a58ac135928" alt="图片" title="图片"></p>
+<h1 id="2冷备份目录文件"><a href="#2冷备份目录文件" class="headerlink" title="2冷备份目录文件"></a>2冷备份目录文件</h1><p>设置备份文件目录脚本 backup_mysql.sh</p>
+<pre><code class="bash">#!/bin/sh
 backuppath=/home/logonuser/mysqlback/
 date=`date +%y%m%d`
 tar -zcPf ${backuppath}mysql_back&quot;-&quot;${date}.tar.gz /var/docker_files/mysql
-find /home/logonuser/mysqlback/ -mtime +7 -name &quot;*.tar.gz&quot; -exec rm -rf {} \;</code></pre><p>设置定时任务<br>vi /etc/crontab<br><img src="https://lexiangla.com/assets/5593ce76ade211eab0ba0a58ac135a16" alt="图片" title="图片"></p>
+find /home/logonuser/mysqlback/ -mtime +7 -name &quot;*.tar.gz&quot; -exec rm -rf {} \;</code></pre>
+<h1 id="3设置定时任务"><a href="#3设置定时任务" class="headerlink" title="3设置定时任务"></a>3设置定时任务</h1><p>vi /etc/crontab<br><img src="https://lexiangla.com/assets/5593ce76ade211eab0ba0a58ac135a16" alt="图片" title="图片"></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -211,7 +214,7 @@ find /home/logonuser/mysqlback/ -mtime +7 -name &quot;*.tar.gz&quot; -exec rm -r
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-开启binglog"><span class="toc-number">1.</span> <span class="toc-text">1 开启binglog</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-开启binglog"><span class="toc-number">1.</span> <span class="toc-text">1 开启binglog</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2冷备份目录文件"><span class="toc-number">2.</span> <span class="toc-text">2冷备份目录文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3设置定时任务"><span class="toc-number">3.</span> <span class="toc-text">3设置定时任务</span></a></li></ol>
                 </div>
             </div>
             

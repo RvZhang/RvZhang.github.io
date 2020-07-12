@@ -146,7 +146,7 @@
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                1.3k
+                1.4k
             </span>
             
             
@@ -161,8 +161,9 @@
         
         <div class="md-content animated fadeIn">
             
-            <pre><code>java -jar XXX.jar &amp;</code></pre><ul>
-<li>命令结尾没有 “&amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接关闭...</li></ul>
+            <pre><code class="bash">java -jar XXX.jar &amp;</code></pre>
+<ul>
+<li>命令结尾没有 “&amp;” ，则变成 “java -jar XXX.jar ” ，表示在当前ssh窗口，可按CTRL + C打断程序运行，或者直接关...</li></ul>
             
             <span class="read-more"><a href="/2020/07/12/linux-%E5%90%AF%E5%8A%A8jar%E4%B8%8D%E8%BE%93%E5%87%BA%E6%97%A5%E5%BF%97/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
@@ -204,7 +205,7 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                        826
+                        1k
                     </span>
                 
                 
@@ -219,18 +220,19 @@
         
         <div class="md-content animated fadeIn">
             
-                <pre><code>[mysqld]
+                <pre><code class="mysql.cnf">[mysqld]
 log_bin=mysql_bin
 binlog-format=STATEMENT
-server-id=1</code></pre><p>重启MySQL</p>
+server-id=1</code></pre>
+<p>重启MySQL</p>
 <p>进入到MySQL中，使用面命令查看是否开启bin_log</p>
-<pre><code>show binary logs</code></pre><p></p>
-<p>#2冷备份目录文件</p>
+<pre><code class="mysql">show binary logs</code></pre>
+<p></p>
 <p>设置备份文件目录脚本 backup_mysql.sh</p>
-<pre><code>#!/bin/sh
+<pre><code class="bash">#!/bin/sh
 backuppath=/home/logonuser/mysqlback/
 date=`date +%y%m%d`
-tar -zcPf ${backuppath}mysql_back...</code></pre>
+tar -zcPf ${backuppath}mysql_back&quot...</code></pre>
             
             <span class="read-more"><a href="/2020/07/11/MySQL%E5%A4%87%E4%BB%BD-bin-log-%E5%86%B7%E5%A4%87%E4%BB%BD/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
